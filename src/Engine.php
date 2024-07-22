@@ -5,13 +5,15 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
+const NUMBER_GAMES = 3;
+
 function game(string $description, callable $game): void
 {
     $name = welcome();
 
     line($description);
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < NUMBER_GAMES; $i++) {
         $response = $game();
 
         if ($response['result']) {
