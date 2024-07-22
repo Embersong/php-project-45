@@ -20,3 +20,5 @@ $ make install
 
 * ### [brain-calc](https://asciinema.org/a/Ei4S7HRN2mRbYmKHKBKan1qWS)
 
+* ### [brain-gcd](https://asciinema.org/a/O764eSB2ZLfWIYYCYB3fBC2cn)
+
