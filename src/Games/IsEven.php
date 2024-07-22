@@ -10,7 +10,7 @@ function isEven(): void
         $question = rand(1, 100);
         $correct = (($question & 1) == 1) ? "no" : "yes";
 
-        $answer = answer($question);
+        $answer = answer((string)$question);
 
         return [
             'result' => ($answer === 'yes' || $answer === 'no') && $answer === $correct,

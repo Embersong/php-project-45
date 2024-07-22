@@ -11,7 +11,7 @@ function isPrime(): void
 
         $correct = primeCheck($question);
 
-        $answer = answer($question);
+        $answer = answer((string)$question);
 
         return [
             'result' => $answer === $correct,
