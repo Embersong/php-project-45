@@ -10,7 +10,7 @@ const MAX_PROGRESS_STEP = 5;
 const MIN_PROGRESS_START = 0;
 const MAX_PROGRESS_START = 3;
 
-const END_PROGRESS_NUMBER_START = 20;
+const END_PROGRESS_NUMBER_START = 25;
 
 function progression(): void
 {
