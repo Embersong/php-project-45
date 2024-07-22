@@ -22,3 +22,5 @@ $ make install
 
 * ### [brain-gcd](https://asciinema.org/a/O764eSB2ZLfWIYYCYB3fBC2cn)
 
+* ### [brain-progression](https://asciinema.org/a/cRb4IKIVORU9F5Xe4Xtsf8hRM)
+
