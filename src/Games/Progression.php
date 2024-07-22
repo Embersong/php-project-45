@@ -9,8 +9,8 @@ function progression(): void
     game('What number is missing in the progression?', function () {
 
         $start = rand(0, 3);
-        $end = rand(20, 50);
-        $step = rand(2, 5);
+        $end = rand(30, 50);
+        $step = rand(2, 6);
         $progression = range($start, $end, $step);
         $randKey = array_rand($progression);
 
