@@ -4,10 +4,13 @@ namespace BrainGames\Cli;
 
 use function cli\prompt;
 
+const MIN_PRIME_NUMBER = 1;
+const MAX_PRIME_NUMBER = 20;
+
 function isPrime(): void
 {
     game('Answer "yes" if given number is prime. Otherwise answer "no".', function () {
-        $question = rand(1, 20);
+        $question = rand(MIN_PRIME_NUMBER, MAX_PRIME_NUMBER);
 
         $correct = primeCheck($question);
 

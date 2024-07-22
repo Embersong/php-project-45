@@ -4,11 +4,14 @@ namespace BrainGames\Cli;
 
 use function cli\prompt;
 
+const MIN_CALC_NUMBER = 1;
+const MAX_CALC_NUMBER = 100;
+
 function Calc(): void
 {
     game('What is the result of the expression?', function () {
-        $first = rand(1, 100);
-        $second = rand(1, 100);
+        $first = rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
+        $second = rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
         $question = $correct = '';
 
         switch (mt_rand(1, 3)) {
@@ -21,8 +24,6 @@ function Calc(): void
                 $correct = $first - $second;
                 break;
             case 3:
-                $first = rand(1, 9);
-                $second =  rand(1, 9);
                 $question = "{$first} * {$second}";
                 $correct = $first * $second;
                 break;

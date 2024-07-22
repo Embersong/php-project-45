@@ -4,11 +4,14 @@ namespace BrainGames\Cli;
 
 use function cli\prompt;
 
+const MIN_GCD_NUMBER = 1;
+const MAX_GCD_NUMBER = 100;
+
 function greatCommonDiv(): void
 {
     game('Find the greatest common divisor of given numbers.', function () {
-        $first = rand(1, 100);
-        $second = rand(1, 100);
+        $first = rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
+        $second = rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
 
         $question = "$first $second";
 
