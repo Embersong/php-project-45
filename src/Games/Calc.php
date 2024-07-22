@@ -26,7 +26,6 @@ function Calc(): void
                 $correct = $first * $second;
                 break;
         }
-
         $answer = prompt("Question: $question\nYour answer");
 
         return [
