@@ -9,6 +9,7 @@ function Calc(): void
     game('What is the result of the expression?', function () {
         $first = rand(1, 100);
         $second = rand(1, 100);
+        $question = $correct = '';
 
         switch (mt_rand(1, 3)) {
             case 1:
