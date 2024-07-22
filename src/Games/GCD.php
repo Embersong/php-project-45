@@ -20,7 +20,7 @@ function greatCommonDiv(): void
             }
         }
         $correct = $second;
-        $answer = prompt("Question: $question\nYour answer");
+        $answer = answer($question);
 
         return [
             'result' => $answer == $correct,

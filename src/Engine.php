@@ -25,3 +25,8 @@ function game(string $description, callable $game): void
 
     line("Congratulations, $name!");
 }
+
+function answer($question): string
+{
+    return prompt("Question: $question\nYour answer");
+}

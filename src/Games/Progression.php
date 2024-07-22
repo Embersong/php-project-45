@@ -19,7 +19,7 @@ function progression(): void
 
         $question = implode(' ', $progression);
 
-        $answer = prompt("Question: $question\nYour answer");
+        $answer = answer($question);
 
         return [
             'result' => $answer == $correct,

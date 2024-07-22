@@ -24,3 +24,5 @@ $ make install
 
 * ### [brain-progression](https://asciinema.org/a/cRb4IKIVORU9F5Xe4Xtsf8hRM)
 
+* ### [brain-prime](https://asciinema.org/a/ZExcqqz9Wl99zuKHXJGuHsSgU)
+
