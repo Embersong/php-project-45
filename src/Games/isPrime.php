@@ -25,7 +25,7 @@ function isPrime(): void
     });
 }
 
-function primeCheck(int $number): string
+function primeCheck(int $number): bool
 {
     if ($number == 1) {
         return false;
