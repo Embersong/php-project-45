@@ -10,9 +10,10 @@ const MAX_PRIME_NUMBER = 20;
 function isPrime(): void
 {
     play('Answer "yes" if given number is prime. Otherwise answer "no".', function () {
+
         $question = rand(MIN_PRIME_NUMBER, MAX_PRIME_NUMBER);
 
-        $correct = primeCheck($question);
+        $correct = primeCheck($question) ? 'yes' : 'no';
 
         $answer = answer((string)$question);
 
@@ -26,10 +27,13 @@ function isPrime(): void
 
 function primeCheck(int $number): string
 {
-    for ($i = 2; $i < $number; $i++) {
+    if ($number == 1) {
+        return false;
+    }
+    for ($i = 2; $i <= $number / 2; $i++) {
         if ($number % $i == 0) {
-            return 'no';
+            return false;
         }
     }
-    return 'yes';
+    return true;
 }

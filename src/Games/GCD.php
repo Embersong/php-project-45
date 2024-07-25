@@ -15,14 +15,8 @@ function greatCommonDiv(): void
 
         $question = "$first $second";
 
-        while ($first != $second) {
-            if ($first > $second) {
-                $first = $first - $second;
-            } else {
-                $second = $second - $first;
-            }
-        }
-        $correct = $second;
+        $correct = gcd($first, $second);
+
         $answer = answer($question);
 
         return [
@@ -31,4 +25,16 @@ function greatCommonDiv(): void
             'answer' => $answer,
         ];
     });
+}
+
+function gcd(int $first, int $second): int
+{
+    while ($first != $second) {
+        if ($first > $second) {
+            $first = $first - $second;
+        } else {
+            $second = $second - $first;
+        }
+    }
+    return $second;
 }
