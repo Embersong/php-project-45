@@ -9,17 +9,21 @@ const NUMBER_GAMES = 3;
 
 function play(string $description, callable $game): void
 {
-    $name = welcome();
+    printWelcome();
+    $name = getName();
+    printHelloName($name);
 
     line($description);
 
     for ($i = 0; $i < NUMBER_GAMES; $i++) {
         $response = $game();
 
-        if ($response['result']) {
+        $answer = getAnswer($response['question']);
+
+        if ($answer == $response['correct']) {
             line("Correct!");
         } else {
-            line("'{$response['answer']}' is wrong answer ;(. Correct answer was '{$response['correct']}'.");
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$response['correct']}'.");
             line("Let's try again, $name!");
             die();
         }
@@ -28,7 +32,7 @@ function play(string $description, callable $game): void
     line("Congratulations, $name!");
 }
 
-function answer(string $question): string
+function getAnswer(string $question): string
 {
     return prompt("Question: $question\nYour answer");
 }

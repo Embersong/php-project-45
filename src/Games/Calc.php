@@ -28,12 +28,10 @@ function Calc(): void
                 $correct = $first * $second;
                 break;
         }
-        $answer = answer($question);
 
         return [
-            'result' => $answer == $correct,
+            'question' => $question,
             'correct' => $correct,
-            'answer' => $answer,
         ];
     });
 }

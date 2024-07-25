@@ -29,12 +29,9 @@ function progression(): void
 
         $question = implode(' ', $progression);
 
-        $answer = answer($question);
-
         return [
-            'result' => $answer == $correct,
+            'question' => $question,
             'correct' => $correct,
-            'answer' => $answer,
         ];
     });
 }

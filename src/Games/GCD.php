@@ -17,12 +17,9 @@ function greatCommonDiv(): void
 
         $correct = gcd($first, $second);
 
-        $answer = answer($question);
-
         return [
-            'result' => $answer == $correct,
+            'question' => $question,
             'correct' => $correct,
-            'answer' => $answer,
         ];
     });
 }
