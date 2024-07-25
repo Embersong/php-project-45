@@ -9,7 +9,7 @@ const MAX_EVEN_NUMBER = 100;
 
 function isEven(): void
 {
-    game('Answer "yes" if the number is even, otherwise answer "no".', function () {
+    play('Answer "yes" if the number is even, otherwise answer "no".', function () {
         $question = rand(MIN_EVEN_NUMBER, MAX_EVEN_NUMBER);
         $correct = (($question & 1) == 1) ? "no" : "yes";
 

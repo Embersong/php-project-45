@@ -9,7 +9,7 @@ const MAX_CALC_NUMBER = 100;
 
 function Calc(): void
 {
-    game('What is the result of the expression?', function () {
+    play('What is the result of the expression?', function () {
         $first = rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
         $second = rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
         $question = $correct = '';

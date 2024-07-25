@@ -9,7 +9,7 @@ const MAX_GCD_NUMBER = 100;
 
 function greatCommonDiv(): void
 {
-    game('Find the greatest common divisor of given numbers.', function () {
+    play('Find the greatest common divisor of given numbers.', function () {
         $first = rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
         $second = rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
 

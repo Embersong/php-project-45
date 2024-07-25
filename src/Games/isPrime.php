@@ -9,7 +9,7 @@ const MAX_PRIME_NUMBER = 20;
 
 function isPrime(): void
 {
-    game('Answer "yes" if given number is prime. Otherwise answer "no".', function () {
+    play('Answer "yes" if given number is prime. Otherwise answer "no".', function () {
         $question = rand(MIN_PRIME_NUMBER, MAX_PRIME_NUMBER);
 
         $correct = primeCheck($question);

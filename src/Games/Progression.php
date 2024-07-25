@@ -14,7 +14,7 @@ const END_PROGRESS_NUMBER_START = 25;
 
 function progression(): void
 {
-    game('What number is missing in the progression?', function () {
+    play('What number is missing in the progression?', function () {
 
         $start = rand(MIN_PROGRESS_START, MAX_PROGRESS_START);
         $end = rand(END_PROGRESS_NUMBER_START, END_PROGRESS_NUMBER_START + MIN_PROGRESS_NUMBERS * MAX_PROGRESS_STEP);

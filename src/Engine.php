@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const NUMBER_GAMES = 3;
 
-function game(string $description, callable $game): void
+function play(string $description, callable $game): void
 {
     $name = welcome();
 
