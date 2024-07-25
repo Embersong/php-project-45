@@ -7,7 +7,7 @@ use function cli\prompt;
 const MIN_CALC_NUMBER = 1;
 const MAX_CALC_NUMBER = 100;
 
-function Calc(): void
+function calc(): void
 {
     play('What is the result of the expression?', function () {
         $first = rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
