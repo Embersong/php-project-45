@@ -2,8 +2,6 @@
 
 namespace BrainGames\Cli;
 
-use function cli\prompt;
-
 const MIN_CALC_NUMBER = 1;
 const MAX_CALC_NUMBER = 100;
 

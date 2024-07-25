@@ -2,8 +2,6 @@
 
 namespace BrainGames\Cli;
 
-use function cli\prompt;
-
 const MIN_PRIME_NUMBER = 1;
 const MAX_PRIME_NUMBER = 20;
 

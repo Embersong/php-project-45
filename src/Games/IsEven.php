@@ -2,8 +2,6 @@
 
 namespace BrainGames\Cli;
 
-use function cli\prompt;
-
 const MIN_EVEN_NUMBER = 1;
 const MAX_EVEN_NUMBER = 100;
 

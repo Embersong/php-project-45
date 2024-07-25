@@ -2,8 +2,6 @@
 
 namespace BrainGames\Cli;
 
-use function cli\prompt;
-
 const MIN_GCD_NUMBER = 1;
 const MAX_GCD_NUMBER = 100;
 
