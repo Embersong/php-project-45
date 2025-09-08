@@ -17,14 +17,14 @@ function greatCommonDiv(): void
 
         return [
             'question' => $question,
-            'correct' => $correct,
+            'correct' => (string)$correct,
         ];
     });
 }
 
 function gcd(int $first, int $second): int
 {
-    while ($first != $second) {
+    while ($first !== $second) {
         if ($first > $second) {
             $first = $first - $second;
         } else {

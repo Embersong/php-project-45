@@ -31,7 +31,7 @@ function progression(): void
 
         return [
             'question' => $question,
-            'correct' => $correct,
+            'correct' => (string)$correct,
         ];
     });
 }

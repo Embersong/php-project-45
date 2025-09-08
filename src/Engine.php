@@ -20,7 +20,7 @@ function play(string $description, callable $game): void
 
         $answer = prompt("Question: {$response['question']}\nYour answer");
 
-        if ($answer == $response['correct']) {
+        if ($answer === $response['correct']) {
             line("Correct!");
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$response['correct']}'.");

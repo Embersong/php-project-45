@@ -29,7 +29,7 @@ function calc(): void
 
         return [
             'question' => $question,
-            'correct' => $correct,
+            'correct' => (string)$correct,
         ];
     });
 }
