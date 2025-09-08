@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a5adb1dc29a6d9b357f8/maintainability)](https://codeclimate.com/github/Embersong/php-project-45/maintainability)
 
 ## About
-Hexlet project 1
+Hexlet project 1 main
 ## PHP
 The project is running on PHP 8.1.2
 ## Install
