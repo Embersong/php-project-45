@@ -7,7 +7,22 @@ use function cli\prompt;
 
 function welcome(): void
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
+    printWelcome();
+    $name = getName();
+    printHelloName($name);
+}
+
+function printHelloName(string $name): void
+{
     line("Hello, %s!", $name);
+}
+
+function printWelcome(): void
+{
+    line('Welcome to the Brain Games!');
+}
+
+function getName(): string
+{
+    return prompt('May I have your name?');
 }

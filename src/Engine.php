@@ -1,33 +1,33 @@
 <?php
 
-namespace BrainGames\Engine;
+namespace BrainGames\Cli;
 
 use function cli\line;
 use function cli\prompt;
 
-function playGame(string $descr, array $questions): void
+const NUMBER_GAMES = 3;
+
+function play(string $description, callable $game): void
 {
-    $name = '';
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
 
-    foreach ($questions as $key => $value) {
-        if ($key === 0) {
-            line('Welcome to the Brain Games!');
-            $name = prompt('May I have your name?');
-            line("Hello, %s!", $name);
+    line($description);
 
-            line($descr);
-        }
-        line('Question: %s', $value['question']);
-        $answer = prompt('Your answer');
-        if ($answer === $value['answer']) {
-            line('Correct!');
+    for ($i = 0; $i < NUMBER_GAMES; $i++) {
+        $response = $game();
+
+        $answer = prompt("Question: {$response['question']}\nYour answer");
+
+        if ($answer === $response['correct']) {
+            line("Correct!");
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $value['answer']);
-            line("Let's try again, %s!", $name);
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$response['correct']}'.");
+            line("Let's try again, $name!");
             return;
         }
-        if ($key === 2) {
-            line("Congratulations, %s!", $name);
-        }
     }
+
+    line("Congratulations, $name!");
 }
