@@ -29,7 +29,7 @@ function run(): void
 
 function calculate(int $x, int $y, string $operation): int
 {
-    return match($operation) {
+    return match ($operation) {
         '+' => $x + $y,
         '-' => $x - $y,
         '*' => $x * $y,

@@ -15,7 +15,6 @@ function play(string $description, callable $game): void
     line($description);
 
     for ($i = 0; $i < NUMBER_GAMES; $i++) {
-
         $response = $game();
         $answer = prompt("Question: {$response['question']}\nYour answer");
 
