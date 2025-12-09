@@ -18,7 +18,7 @@ function run(): void
         $operation = $operations[array_rand($operations)];
 
         $question = "$first $operation $second";
-        $correct = calculate($operation, $first, $second);
+        $correct = calculate($first, $second, $operation);
 
         return [
             'question' => $question,
