@@ -1,11 +1,13 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\Games\Prime;
+
+use function BrainGames\Engine\play;
 
 const MIN_PRIME_NUMBER = 1;
 const MAX_PRIME_NUMBER = 20;
 
-function prime(): void
+function run(): void
 {
     play('Answer "yes" if given number is prime. Otherwise answer "no".', function () {
 

@@ -1,11 +1,13 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\Games\Even;
+
+use function BrainGames\Engine\play;
 
 const MIN_EVEN_NUMBER = 1;
 const MAX_EVEN_NUMBER = 100;
 
-function even(): void
+function run(): void
 {
     play('Answer "yes" if the number is even, otherwise answer "no".', function () {
         $question = rand(MIN_EVEN_NUMBER, MAX_EVEN_NUMBER);

@@ -1,11 +1,13 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\Games\Gcd;
+
+use function BrainGames\Engine\play;
 
 const MIN_GCD_NUMBER = 1;
 const MAX_GCD_NUMBER = 100;
 
-function greatCommonDiv(): void
+function run(): void
 {
     play('Find the greatest common divisor of given numbers.', function () {
         $first = rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
@@ -13,7 +15,7 @@ function greatCommonDiv(): void
 
         $question = "$first $second";
 
-        $correct = gcd($first, $second);
+        $correct = getGcd($first, $second);
 
         return [
             'question' => $question,
@@ -22,7 +24,7 @@ function greatCommonDiv(): void
     });
 }
 
-function gcd(int $first, int $second): int
+function getGcd(int $first, int $second): int
 {
     while ($first !== $second) {
         if ($first > $second) {

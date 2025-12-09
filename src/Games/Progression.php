@@ -1,6 +1,8 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\Games\Progression;
+
+use function BrainGames\Engine\play;
 
 const MIN_PROGRESS_NUMBERS = 5;
 
@@ -12,7 +14,7 @@ const MAX_PROGRESS_START = 3;
 
 const END_PROGRESS_NUMBER_START = 25;
 
-function progression(): void
+function run(): void
 {
     play('What number is missing in the progression?', function () {
 
